@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SAMADHI</title>
+<style>
+	body {
+  background-color: rgb(0, 0, 0);
+}
+
+
+	.menu {
+		background-image: url(h.jpg);
+		width: 23%;
+		height: 25px;
+		float: left;
+		padding: 10px;	
+		font-size:20px;
+		text-align: center;		
+		color: rgb(133, 3, 20);
+	}
+	.menu:hover {
+		background: #000;
+		
+		color: rgb(12, 226, 94);	
+	}
+	#content {
+		clear: both;
+		background: #000500;
+		padding: 10;
+		overflow-y: scroll;
+		width: 100%;
+		height: 600px;
+		border: 0;
+	}
+
+</style>
+</head>
+<body>
+<div id="main">
+	<div id="nav">
+		<div id="menu1" class="menu">INICIO</div>	
+		<div id="menu2" class="menu">HISTORIA </div>
+		<div id="menu3" class="menu">FOTO</div>
+		<div id="menu4" class="menu">CONTACTO</div>		
+	</div>
+	<iframe id="content" src="http://google.com">iFrames not supported</iframe>
+</div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+<script>
+	$(document).ready(function(e) {
+		$('#menu1').on('click', function(){
+			
+			$('#content').attr('src', 'inicio.html');
+		});
+		$('#menu2').on('click', function(){
+			$('#content').attr('src', 'historia.html');
+			
+		});
+		$('#menu3').on('click', function(){		
+			$('#content').attr('src', 'gallery.html');
+			
+		});
+		$('#menu4').on('click', function(){		
+			$('#content').attr('src', 'contacto.html');
+			
+		});
+		
+		
+	});
+</script>
+
+</body>
+</html>
